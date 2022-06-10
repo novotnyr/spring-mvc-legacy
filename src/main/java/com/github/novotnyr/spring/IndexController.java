@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class IndexController {
     @GetMapping("/index.form")
     public String showIndex() {
-        return "/WEB-INF/index.jsp";
+        return "index";
     }
 }
