@@ -18,6 +18,12 @@ public class WebConfiguration {
         return new FormController();
     }
 
+    /**
+     * Establishing a bean allows to expose custom view resolver.
+     * <p>
+     *     In this case, we expose Struts-like aliasing resolution.
+     * </p>
+     */
     @Bean
     ViewResolver viewResolver() {
         return new AliasingJspViewResolver()
