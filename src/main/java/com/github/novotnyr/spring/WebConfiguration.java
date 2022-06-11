@@ -14,8 +14,13 @@ public class WebConfiguration {
     }
 
     @Bean
+    FormController formController() {
+        return new FormController();
+    }
+
+    @Bean
     ViewResolver viewResolver() {
         return new AliasingJspViewResolver()
-                .alias("index", "index");
+                .alias("result", "submitted-form");
     }
 }
